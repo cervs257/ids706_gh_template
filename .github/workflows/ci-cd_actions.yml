@@ -1,0 +1,13 @@
+name: ci-cd_actions
+on: push
+
+jobs:
+build:
+  runs-on: ubuntu-latest
+  steps:
+    # - name: install packages
+    # run: make install
+    # run: make lint
+    # run: make test
+    # format
+    # deploy
