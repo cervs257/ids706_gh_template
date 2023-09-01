@@ -1,2 +1,2 @@
-# ids706_data_engineering
+# ids706_gh_template
 IDS 706 at Duke
