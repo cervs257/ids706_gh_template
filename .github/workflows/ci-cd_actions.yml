@@ -1,17 +1,23 @@
 name: ci-cd_actions
-on: push
+on: 
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
 
 jobs:
-build:
-  runs-on: ubuntu-latest
-  steps:
-    - name: setup python
-      uses: actions/setup-python@v4
-      with: 
-        python-version: '3.10.12'
-    # - name: install packages
-    # run: make install
-    # run: make lint
-    # run: make test
-    # format
-    # deploy
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup python
+        uses: actions/setup-python@v4
+        with: 
+          python-version: '3.10.12'
+      - uses: actions/checkout@v3
+      - name: install packages
+        run: make install
+      # run: make lint
+      # run: make test
+      # format
+      # deploy
